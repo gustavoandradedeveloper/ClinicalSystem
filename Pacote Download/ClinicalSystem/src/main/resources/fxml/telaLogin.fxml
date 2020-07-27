@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.equipe2.clinicalsystem.controller.TelaLoginController">
+   <left>
+      <AnchorPane prefHeight="500.0" prefWidth="300.0" style="-fx-background-color: #29bc89;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" layoutX="1.0" layoutY="124.0" prefHeight="34.0" prefWidth="300.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0" />
+            <HBox alignment="CENTER" layoutX="37.0" layoutY="207.0" prefHeight="60.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="42.0" prefWidth="300.0">
+                     <children>
+                        <Label prefHeight="49.0" prefWidth="105.0" text="Clinical" textFill="WHITE">
+                           <font>
+                              <Font size="33.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="101.0" layoutY="10.0" prefHeight="49.0" prefWidth="116.0" text="System" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="33.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="7.0" layoutY="458.0" prefHeight="45.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="198.0" text="Deseja criar um login?" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="40.0" right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <JFXButton fx:id="btnRealizarCadastro" onAction="#realizarCadastroLogin" prefHeight="31.0" prefWidth="164.0" style="-fx-background-color: ffffff;" text="Clique aqui" textFill="#29bc89">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: ffffff;" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="txtCpf" layoutX="100.0" layoutY="195.0" prefHeight="27.0" prefWidth="218.0" promptText="CPF" style="-fx-background-color: tranparent; -fx-border-color: #29bc89; -fx-border-width: 0px 0px 2px 0px;" />
+            <Label layoutX="61.0" layoutY="242.0" />
+            <ImageView fitHeight="20.0" fitWidth="29.0" layoutX="61.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/user.png" />
+               </image>
+            </ImageView>
+            <HBox layoutX="1.0" layoutY="259.0" prefHeight="35.0" prefWidth="400.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0">
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                     <image>
+                        <Image url="@../icons/senha.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="60.0" top="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <PasswordField fx:id="txtSenha" prefHeight="27.0" prefWidth="213.0" promptText="Senha" style="-fx-background-color: transparent; -fx-border-color: #29bc89; -fx-border-width: 0px 0px 2px 0px;" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="20.0" right="80.0" />
+                     </HBox.margin>
+                  </PasswordField>
+               </children>
+            </HBox>
+            <JFXButton fx:id="btnLogin" layoutX="117.0" layoutY="320.0" onAction="#btnEntra" prefHeight="32.0" prefWidth="169.0" style="-fx-background-color: #29bc89; -fx-background-radius: 10 10 10 10;" text="Fazer Login" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="71.0" fitWidth="108.0" layoutX="174.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/boneco.png" />
+               </image>
+            </ImageView>
+            <HBox alignment="CENTER" layoutX="86.0" layoutY="104.0" prefHeight="46.0" prefWidth="400.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Label text="  BEM VINDO!">
+                     <font>
+                        <Font name="System Bold" size="31.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Button fx:id="btnFechar" layoutX="345.0" layoutY="14.0" mnemonicParsing="false" onAction="#fecharPrograma" prefHeight="25.0" prefWidth="45.0" style="-fx-background-color: tranparent;">
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/sair.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
